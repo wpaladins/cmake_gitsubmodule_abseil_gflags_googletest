@@ -33,3 +33,10 @@ add_executable(
     gtest_samples/sample2_unittest.cc
 )
 target_link_libraries(gtest_sample2_unittest gtest_main)
+
+add_subdirectory(third_party/glog)
+add_executable(
+    test_glog
+    test_glog.cc
+)
+target_link_libraries(test_glog glog::glog)
