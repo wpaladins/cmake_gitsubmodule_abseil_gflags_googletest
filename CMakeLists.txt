@@ -19,3 +19,17 @@ add_subdirectory(third_party/googletest)
 target_link_libraries(test_gflags gflags::gflags)
 target_link_libraries(test_abseil absl::strings)
 target_link_libraries(test_googletest gtest_main)
+
+add_executable(
+    gtest_sample1_unittest
+    gtest_samples/sample1.cc
+    gtest_samples/sample1_unittest.cc
+)
+target_link_libraries(gtest_sample1_unittest gtest_main)
+
+add_executable(
+    gtest_sample2_unittest
+    gtest_samples/sample2.cc
+    gtest_samples/sample2_unittest.cc
+)
+target_link_libraries(gtest_sample2_unittest gtest_main)
