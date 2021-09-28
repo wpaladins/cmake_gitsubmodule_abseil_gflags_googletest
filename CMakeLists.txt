@@ -40,3 +40,5 @@ add_executable(
     test_glog.cc
 )
 target_link_libraries(test_glog glog::glog)
+
+include(gtest_samples/CMakeLists.txt)
