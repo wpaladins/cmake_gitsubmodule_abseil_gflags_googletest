@@ -42,3 +42,10 @@ add_executable(
 target_link_libraries(test_glog glog::glog)
 
 include(gtest_samples/CMakeLists.txt)
+
+add_subdirectory(third_party/benchmark)
+add_executable(
+    test_benchmark
+    test_benchmark.cpp
+)
+target_link_libraries(test_benchmark benchmark::benchmark)
